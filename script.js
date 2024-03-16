@@ -41,8 +41,10 @@ const sourceUrls = document.querySelector(".sourceUrls");
 function ShowResult(result) {
 
     if (result.hasOwnProperty('title')) {
-        meaning.innerHTML = result.title + result.message;
-        // location.reload();
+        meaning.innerHTML = result.title + "<br>" + result.message;
+        meaning.style.color = "red";
+        grammer.parentElement.remove();
+        setTimeout( () => location.reload(), 4000)
     } else {
 
         NotFound.innerHTML = "";
