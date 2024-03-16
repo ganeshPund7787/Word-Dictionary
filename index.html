@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Word Dictionary.in</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .container-fluid {
+      min-height: 100vh;
+      align-items: center;
+    }
+    i, .word{
+      display: inline-block;
+    }
+    .dn{
+      display: none;
+    }
+    .db{
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid d-flex justify-content-center border border-warning bg-black bg-gradient">
+    <div class="card w-md-50 p-1 bg-danger">
+      <div class="card-body bg-warning p-5">
+        <h5 class="card-title p-4 fs-1 text-center text-dark"> Word Dictionary </h5>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 bg-light fs-5 text-dark" id="input" type="search"
+            placeholder="Search anything" aria-label="Search">
+          <button type="submit" class="btn btn-primary fs-5 " data-bs-toggle="modal" data-bs-target="#Answer">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal bg-black conainers" id="Answer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark bg-gradient">
+        <div class="modal-header">
+          <h3 class="modal-title text-warning" id="exampleModalLabel">Information About Word :- </h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="msg">
+          <!--          For Audio Meassage    -->
+          <div class="card border-warning" style="max-width: 100 rem; ">
+            <div class="card-body text-info text-center">
+              <h4 class="word"></h4>
+              <i class="fa-solid fa-volume-high text-dark"></i>
+              <p class="not-found text-danger"></p>
+            </div>
+          </div>
+
+          <div class="card border-warning mb-3" style="max-width: 100 rem;">
+            <div class="card-body text-dark">
+              <h5>Meaning / Definition</h5>
+              <p class="meaning"></p>
+            </div>
+            <div class="card-body">
+              <h5 class="text-primary">Example's </h5>
+              <p class="example"></p>
+            </div>
+          </div>
+
+          <div class="card border-warning mb-3" style="max-width: 100 rem;">
+            <div class="card-body">
+              <h5 class=" text-success">Synonyms:   </h5>
+              <p class=" grammer"></p>
+            </div>
+            <div  class="card-body">
+              <h5 class="text-success">more:   </h5>
+              <p class="sourceUrls"></p>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
