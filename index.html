@@ -16,12 +16,6 @@
     i, .word{
       display: inline-block;
     }
-    .dn{
-      display: none;
-    }
-    .db{
-      display: block;
-    }
   </style>
 </head>
 
@@ -42,46 +36,25 @@
     </div>
   </div>
 
+
   <!-- Modal -->
-  <div class="modal bg-black conainers" id="Answer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal conainers" id="Answer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content bg-dark bg-gradient">
+      <div class="modal-content  bg-gradient">
         <div class="modal-header">
-          <h3 class="modal-title text-warning" id="exampleModalLabel">Information About Word :- </h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         <h4 class="word"></h4>
+              <i class="fa-solid fa-volume-high text-dark m-3"></i>
+              <p class="not-found text-danger"></p>
         </div>
         <div class="modal-body" id="msg">
-          <!--          For Audio Meassage    -->
-          <div class="card border-warning" style="max-width: 100 rem; ">
-            <div class="card-body text-info text-center">
-              <h4 class="word"></h4>
-              <i class="fa-solid fa-volume-high text-dark"></i>
-              <p class="not-found text-danger"></p>
-            </div>
-          </div>
-
           <div class="card border-warning mb-3" style="max-width: 100 rem;">
             <div class="card-body text-dark">
               <h5>Meaning / Definition</h5>
               <p class="meaning"></p>
-            </div>
-            <div class="card-body">
-              <h5 class="text-primary">Example's </h5>
-              <p class="example"></p>
-            </div>
-          </div>
-
-          <div class="card border-warning mb-3" style="max-width: 100 rem;">
-            <div class="card-body">
-              <h5 class=" text-success">Synonyms:   </h5>
-              <p class=" grammer"></p>
-            </div>
-            <div  class="card-body">
-              <h5 class="text-success">more:   </h5>
+               <h5 class="text-success">more:  </h5>
               <p class="sourceUrls"></p>
             </div>
           </div>
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary bg-danger" data-bs-dismiss="modal">Close</button>
@@ -89,6 +62,8 @@
       </div>
     </div>
   </div>
+
+
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
